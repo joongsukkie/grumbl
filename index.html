@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grumbl · Food memory</title>
+<meta name="description" content="What did you eat? Grumbl is a minimal, photo-first food-memory app for iOS.">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; }
+  body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #000;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 24px;
+    text-align: center;
+  }
+  .mark {
+    width: 96px;
+    height: 96px;
+    margin-bottom: 36px;
+  }
+  .wordmark {
+    font-family: "Futura", "Helvetica Neue", sans-serif;
+    font-weight: 500;
+    font-size: 44px;
+    letter-spacing: 14px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    padding-left: 14px; /* compensate for letter-spacing on the right of last letter */
+  }
+  .tagline {
+    font-family: Georgia, "Times New Roman", serif;
+    font-style: italic;
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 56px;
+    max-width: 420px;
+    line-height: 1.5;
+  }
+  .description {
+    font-size: 14px;
+    line-height: 1.7;
+    max-width: 480px;
+    color: #333;
+    margin-bottom: 56px;
+  }
+  .nav {
+    display: flex;
+    gap: 28px;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+  .nav a { color: #000; text-decoration: none; border-bottom: 1px solid #000; padding-bottom: 2px; }
+  .nav a:hover { color: #555; border-color: #555; }
+  footer {
+    padding: 24px;
+    text-align: center;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #888;
+    border-top: 1px solid #eee;
+  }
+</style>
+</head>
+<body>
+
+<main>
+  <!-- The bitten plate mark, drawn cleanly via SVG with even-odd fill, then clipped to a circle so the bite never spills past the plate edge. -->
+  <svg class="mark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-label="Grumbl">
+    <defs>
+      <clipPath id="plateClip">
+        <circle cx="50" cy="50" r="50"/>
+      </clipPath>
+    </defs>
+    <g clip-path="url(#plateClip)" fill="#000" fill-rule="evenodd">
+      <circle cx="50" cy="50" r="50"/>
+      <circle cx="85.36" cy="14.64" r="23.5"/>
+    </g>
+  </svg>
+
+  <div class="wordmark">Grumbl</div>
+  <div class="tagline">what did you eat?</div>
+
+  <div class="description">
+    A minimal, photo-first food memory for iOS. Snap a meal, save it forever, find any meal you've ever logged — by date, by type, by note. No calories, no judgment, no friction.
+  </div>
+
+  <nav class="nav">
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+    <a href="mailto:joongsukkie@gmail.com">Support</a>
+  </nav>
+</main>
+
+<footer>
+  © 2026 Grumbl
+</footer>
+
+</body>
+</html>
